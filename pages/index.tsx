@@ -38,11 +38,17 @@ const Header = () => (
     />
   </header>
 );
-const Hit = ({ hit }) => (
+const Hit = ({ hit }: { hit: any }) => (
   <a href={"/"}>
     <div className="card">
       <div className="card-image">
-        <Image src={hit.image} alt={hit.name} className="image" />
+        <Image
+          src={hit.image}
+          width="80"
+          height="100"
+          alt={hit.name}
+          className="image"
+        />
       </div>
       <div className="card-contents">
         <Highlight attribute="title" hit={hit} className="card-title" />
@@ -55,6 +61,7 @@ const Hit = ({ hit }) => (
     </div>
   </a>
 );
+
 const Content = () => (
   <main>
     <div className="information">
