@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Highlight } from "react-instantsearch-dom";
 
 interface HitModel {
   name: string;
@@ -26,8 +25,7 @@ export const HitCompo = (props: HitCompoProps) => {
           />
         </div>
         <div className="card-contents">
-          <Highlight attribute="title" hit={props.hit} className="card-title" />
-          <Highlight attribute="year" hit={props.hit} className="card-year" />
+          <div className="card-rating">Title: {props.hit.title}</div>
           <div className="card-rating">Rating: {props.hit.rating}</div>
           <div className="card-genre">
             <span>{props.hit.genre[0]}</span> <span>{props.hit.genre[1]}</span>

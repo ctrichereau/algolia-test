@@ -1,12 +1,9 @@
-import { SearchBox } from "react-instantsearch-dom";
+import { SearchBox } from "react-instantsearch-hooks-web";
 
 export const HeaderCompo = () => {
   return (
     <header className="header">
-      <SearchBox
-        className="search-bar"
-        translations={{ placeholder: "Search for Movies" }}
-      />
+      <SearchBox className="search-bar" />
     </header>
   );
 };
