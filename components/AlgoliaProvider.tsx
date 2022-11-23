@@ -8,6 +8,7 @@ import { history } from "instantsearch.js/es/lib/routers";
 interface AlgoliaProviderProps {
   children: React.ReactNode;
   url: string;
+  routing: boolean;
 }
 
 export const AlgoliaProvider = (props: AlgoliaProviderProps) => {
@@ -54,7 +55,7 @@ export const AlgoliaProvider = (props: AlgoliaProviderProps) => {
         searchClient={searchClient}
         indexName="movies"
         stalledSearchDelay={500}
-        routing={routing}
+        routing={props.routing ? routing : false}
       >
         {props.children}
       </InstantSearch>

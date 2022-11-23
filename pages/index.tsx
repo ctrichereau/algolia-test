@@ -19,7 +19,7 @@ type HomeProps = {
 
 export default function Home(props: HomeProps) {
   return (
-    <AlgoliaProvider url={props.url}>
+    <AlgoliaProvider url={props.url} routing={false}>
       <HeaderCompo />
       <Link href={{ pathname: "/results", query: { q: "france" } }}>
         {/* <Link href="/results?search=france">  > */}

@@ -17,7 +17,7 @@ type ResultsProps = {
 
 export const Results = (props: ResultsProps) => {
   return (
-    <AlgoliaProvider url={props.url}>
+    <AlgoliaProvider url={props.url} routing>
       <Resultats />
     </AlgoliaProvider>
   );
