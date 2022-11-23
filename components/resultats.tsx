@@ -17,11 +17,7 @@ function Hit({ hit }) {
 }
 
 export default function Resultats(props: UseSearchBoxProps) {
-  const { refine, query: algoliaQuery } = useSearchBox(props);
-
-  useEffect(() => {
-    console.log("algoliaQuery", algoliaQuery);
-  }, [algoliaQuery]);
+  useSearchBox(props);
 
   return (
     <div>
